@@ -17,6 +17,10 @@ AEnemy::AEnemy()
 {
 	PrimaryActorTick.bCanEverTick = true;
 
+	// 以下是 test1 分支中添加的几行代码
+	int m,n,k;
+	m = 100;
+
 	this->GetMesh()->SetCollisionObjectType(ECollisionChannel::ECC_WorldDynamic); // 原来是 ECC_WorldDynamic；ECC_Pawn
 	this->GetMesh()->SetCollisionResponseToChannel(ECollisionChannel::ECC_Visibility, ECollisionResponse::ECR_Block);
 	this->GetMesh()->SetCollisionResponseToChannel(ECollisionChannel::ECC_Camera, ECollisionResponse::ECR_Ignore);
